@@ -26,6 +26,8 @@ Conhecimento: Conhecimento é o entendimento e a interpretação da informação
 > Tipagem fraca (conversão de dados realizados automaticamento quando necessario)
 > Tipagem forte (não faz conversão de dados automaticamente)
 
+3º slide (função e recursividade)
+- função: é uma unidade de código de programação autônoma desenhada para cumprir uma tarefa particular Funções dividem as grandes tarefas de computação em tarefas menores
 
 
 

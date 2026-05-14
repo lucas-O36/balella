@@ -1,31 +1,37 @@
 public class Consulta {
+    // Mantendo todas as variáveis da primeira versão
     public String paciente;
     public String profissional;
     public String data;
-    public int hora; // Vamos usar apenas a hora cheia (ex: 15 para 15h00)
-    public String status; // "Agendada", "Realizada", "Cancelada", "Remarcada"
+    public int hora; 
+    public String status; 
     public double multa;
     public String justificativa;
 
-    // Construtor 1: Cadastro padrão (Assume status "Agendada" e sem multa)
-    public Consulta(String paciente, String profissional, String data, int hora) {
-        this.paciente = paciente;
-        this.profissional = profissional;
-        this.data = data;
-        this.hora = hora;
+    // Construtor 1: Estilo simplificado (usando p, prof, d, h como na segunda)
+    public Consulta(String p, String prof, String d, int h) {
+        this.paciente = p;
+        this.profissional = prof;
+        this.data = d;
+        this.hora = h;
         this.status = "Agendada";
         this.multa = 0.0;
         this.justificativa = "Nenhuma";
     }
 
-    // Construtor 2: Se precisarmos criar uma consulta já com justificativa (Sobrecarga)
-    public Consulta(String paciente, String profissional, String data, int hora, String justificativa) {
-        this.paciente = paciente;
-        this.profissional = profissional;
-        this.data = data;
-        this.hora = hora;
+    // Construtor 2: Sobrecarga para incluir justificativa
+    public Consulta(String p, String prof, String d, int h, String j) {
+        this.paciente = p;
+        this.profissional = prof;
+        this.data = d;
+        this.hora = h;
         this.status = "Agendada";
         this.multa = 0.0;
-        this.justificativa = justificativa;
+        this.justificativa = j;
+    }
+
+    // Adicionando a função da segunda versão sem mudar a lógica
+    public void atualizarStatus(String novoStatus) {
+        this.status = novoStatus;
     }
 }
